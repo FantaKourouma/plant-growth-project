@@ -50,3 +50,20 @@ function expandedGarden(weeks) {
 
 // Call for 10 weeks
 expandedGarden(10);
+
+
+//Part 3
+
+try {
+    const startingPlants = 100;
+    const plantCount = startingPlants * Math.pow(2, 10); // Plants after 10 weeks
+    const requiredSpace = plantCount * minSpacePerPlant;
+
+    if (requiredSpace > area) {
+        throw new Error("The required space exceeds the available space in the garden.");
+    }
+
+    console.log(`After 10 weeks, the space required for 100 plants is: ${requiredSpace} square meters.`);
+} catch (error) {
+    console.error(error.message);
+}
